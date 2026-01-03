@@ -94,11 +94,12 @@
       text-align: center;
       box-shadow: 0 0 0 rgba(0,0,0,0);
       transition:
-        transform 0.35s cubic-bezier(.19,.71,.35,1),
-        box-shadow 0.35s cubic-bezier(.19,.71,.35,1),
-        border-color 0.35s ease,
-        background 0.35s ease,
-        color 0.35s ease;
+        transform 0.55s cubic-bezier(.19,.71,.35,1),
+        box-shadow 0.55s cubic-bezier(.19,.71,.35,1),
+        border-color 0.55s ease,
+        background 0.55s ease,
+        color 0.55s ease,
+        filter 0.55s ease;
       cursor: default;
       position: relative;
       overflow: hidden;
@@ -110,7 +111,7 @@
       inset: 0;
       background: radial-gradient(circle at top, rgba(255,255,255,0.75), transparent 55%);
       opacity: 0;
-      transition: opacity 0.35s ease;
+      transition: opacity 0.55s ease;
       pointer-events: none;
     }
 
@@ -128,12 +129,15 @@
       letter-spacing: 0.03em;
     }
 
-    /* ---------- Hover animation ---------- */
+    /* ---------- Hover animation (Glow + Lift) ---------- */
     .embrace-card:hover {
-      transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.22);
-      border-color: #ff2a2a;
-      background: #fff9f9;
+      transform: translateY(-10px) scale(1.06);
+      background: #fff7f7;
+      border-color: #ff3b3b;
+      filter: brightness(1.08);
+      box-shadow:
+        0 0 18px rgba(255, 0, 0, 0.45),
+        0 12px 28px rgba(0,0,0,0.22);
     }
 
     .embrace-card:hover::before {
@@ -163,25 +167,25 @@
       letter-spacing: 0.18em;
     }
 
-    /* ---------- Subtle entrance animation ---------- */
+    /* ---------- Slower entrance animation ---------- */
     .fade-in-up {
       opacity: 0;
-      transform: translateY(16px);
-      animation: fadeInUp 0.7s ease forwards;
+      transform: translateY(22px);
+      animation: fadeInUp 1.1s ease forwards;
     }
 
-    .fade-delay-1 { animation-delay: 0.08s; }
-    .fade-delay-2 { animation-delay: 0.16s; }
-    .fade-delay-3 { animation-delay: 0.24s; }
-    .fade-delay-4 { animation-delay: 0.32s; }
-    .fade-delay-5 { animation-delay: 0.40s; }
-    .fade-delay-6 { animation-delay: 0.48s; }
-    .fade-delay-main { animation-delay: 0.6s; }
+    .fade-delay-1 { animation-delay: 0.15s; }
+    .fade-delay-2 { animation-delay: 0.30s; }
+    .fade-delay-3 { animation-delay: 0.45s; }
+    .fade-delay-4 { animation-delay: 0.60s; }
+    .fade-delay-5 { animation-delay: 0.75s; }
+    .fade-delay-6 { animation-delay: 0.90s; }
+    .fade-delay-main { animation-delay: 1.2s; }
 
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(22px);
       }
       to {
         opacity: 1;
@@ -198,43 +202,36 @@
     </header>
 
     <div class="embrace-grid">
-      <!-- E -->
       <article class="embrace-card fade-in-up fade-delay-1">
         <div class="letter">E</div>
         <div class="word">Empowerment</div>
       </article>
 
-      <!-- M -->
       <article class="embrace-card fade-in-up fade-delay-2">
         <div class="letter">M</div>
         <div class="word">Mentorship</div>
       </article>
 
-      <!-- B -->
       <article class="embrace-card fade-in-up fade-delay-3">
         <div class="letter">B</div>
         <div class="word">Belonging</div>
       </article>
 
-      <!-- R -->
       <article class="embrace-card fade-in-up fade-delay-4">
         <div class="letter">R</div>
         <div class="word">Respect</div>
       </article>
 
-      <!-- A -->
       <article class="embrace-card fade-in-up fade-delay-5">
         <div class="letter">A</div>
         <div class="word">Acceptance</div>
       </article>
 
-      <!-- C -->
       <article class="embrace-card fade-in-up fade-delay-6">
         <div class="letter">C</div>
         <div class="word">Collaboration</div>
       </article>
 
-      <!-- EMBRACE main -->
       <article class="embrace-card embrace-main fade-in-up fade-delay-main">
         <div class="letter">E</div>
         <div class="word">EMBRACE</div>
